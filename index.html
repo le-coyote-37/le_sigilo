@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">  
     <title>le_sigilo</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body>
     <header class="site-header">
@@ -15,36 +15,12 @@
             <h1 class="site-title">le_sigilo</h1>
             <p class="site-subtitle">acervo de contos eróticos</p>
         </div>
-        <div class="header-overlay"></div>
     </header>
 
     <main class="content">
-        <aside class="sidebar">
-            <div class="search-box">
-                <input type="text" placeholder="Buscar contos..." class="search-input">
-                <button class="search-button">🔍</button>
-            </div>
-            <nav class="categories">
-                <h3>Categorias</h3>
-                <ul>
-                    <li><a href="#">Todos</a></li>
-                    <li><a href="#">Românticos</a></li>
-                    <li><a href="#">Ousados</a></li>
-                    <li><a href="#">Proibidos</a></li>
-                    <li><a href="#">Fantasias</a></li>
-                </ul>
-            </nav>
-            <div class="about">
-                <h3>Sobre</h3>
-                <p>Um acervo de contos eróticos selecionados, onde as palavras despertam os sentidos.</p>
-            </div>
-        </aside>
-
-        <section class="posts-container">
-            <div class="posts-list" id="postsList">
-                <!-- Os posts serão carregados dinamicamente aqui -->
-            </div>
-        </section>
+        <div id="app">
+            <!-- TUDO SERÁ CARREGADO AQUI DINAMICAMENTE -->
+        </div>
     </main>
 
     <footer class="site-footer">
