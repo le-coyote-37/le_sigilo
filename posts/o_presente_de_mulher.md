@@ -1,6 +1,3 @@
-Aqui vai o conto completo com a sua edição integrada, mantendo a estrutura e intensidade de _O Voo da Entrega_, com cortes limpos, ritmo sensual e linguagem direta para blog:
-
----
 
 Jovem, dedicada, sem pecados aparentes, ela escondia um desejo proibido pelo colega da empresa. Estagiava na recepção desde o terceiro ano do ensino médio, sonhando com a vaga integral depois da formatura. No hall, sempre via ele de passagem: o instalador das piadas rápidas, das mãos grandes, que chegava com bombons e fazia as recepcionistas rirem alto.
 
@@ -19,8 +16,6 @@ Ela ficou, mexendo no celular por fachada.
 Olhares.  
 — _Melhor assim. A última que reparou, se atrasou._
 Saíram rindo. Ela ficou com o estômago quente: será que ele já ficou com _uma delas_?
----
-
 ---
 
 Fim de dia cheio. **Aniversário de 18 anos dela.** Amigas já tinham ido. Ele sumiu... e voltou: bombons dourados, sorriso malicioso que ela só via nas fantasias.  
