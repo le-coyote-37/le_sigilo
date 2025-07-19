@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
             title: "O Voo da Entrega",
             excerpt: "Eles trocavam mensagens há meses. Mensagens longas, carregadas de desejo...",
             image: "https://images.unsplash.com/photo-1528728329032-2972f65dfb3d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-            file: "o_voo_da_entrega.md"
+            content: "o_voo_da_entrega.md"
         },
         {
             id: 2,
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
             image: "https://images.unsplash.com/photo-1528728329032-2972f65dfb3d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
             date: "15 de Outubro, 2023",
             category: "Proibidos",
-            file: "o_presente_de_mulher.md" // Nome do arquivo MD
+            content: "o_presente_de_mulher.md" // Nome do arquivo MD
         }
     ];
 
