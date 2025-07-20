@@ -3,14 +3,13 @@
         "id": "o_voo_da_entrega",
         "title": "O Voo da Entrega",
         "excerpt": "Um encontro proibido entre dois amantes separados pelo tempo e pelo matrimônio",
-        "image": "https://images.unsplash.com/photo-1528728329032-2972f65dfb3d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+        "image": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
         "file": "o_voo_da_entrega.md"
     },
     {
         "id": "presente_de_18_anos",
         "title": "Presente de 18 Anos",
         "excerpt": "A iniciação de uma jovem nos prazeres secretos de um homem experiente",
-        "image": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
         "file": "presente_de_18_anos.md"
     }
 ]
