@@ -1,45 +1,26 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', async function() {
     const app = document.getElementById('app');
-    const path = window.location.pathname;
-    
-    // Detecta se está no GitHub Pages
-    const isGitHub = path.includes('/le_sigilo');
-    const baseUrl = isGitHub ? '/le_sigilo/' : '/';
-    
-    // Posts disponíveis
-    const posts = [
-        {
-            id: 1,
-            title: "O Voo da Entrega",
-            excerpt: "Eles trocavam mensagens há meses. Mensagens longas, carregadas de desejo...",
-            image: "https://images.unsplash.com/photo-1528728329032-2972f65dfb3d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-            content: "o_voo_da_entrega.md"
-        },
-        {
-            id: 2,
-            title: "O presente de mulher",
-            excerpt: "...",
-            image: "https://images.unsplash.com/photo-1528728329032-2972f65dfb3d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-            date: "15 de Outubro, 2023",
-            category: "Proibidos",
-            content: "o_presente_de_mulher.md" // Nome do arquivo MD
-        }
-    ];
+    const baseUrl = window.location.pathname.includes('/le_sigilo') 
+        ? '/le_sigilo/' 
+        : '/';
 
-    // Roteamento simples
-    const urlParams = new URLSearchParams(window.location.search);
-    const postId = urlParams.get('post');
-    
-    if (postId) {
-        loadPost(postId);
-    } else {
-        showHome();
+    // Carrega lista de posts
+    async function loadPosts() {
+        try {
+            const response = await fetch(`${baseUrl}posts/posts.json`);
+            return await response.json();
+        } catch (error) {
+            console.error('Erro ao carregar posts:', error);
+            return [];
+        }
     }
 
-    // Página inicial
-    function showHome() {
+    // Mostra página inicial
+    async function showHome() {
+        const posts = await loadPosts();
+        
         let html = `
-            <h2>Últimos Contos</h2>
+            <h2>Acervo Completo</h2>
             <div class="posts-list">
         `;
         
@@ -50,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <div class="post-content">
                         <h3 class="post-title">${post.title}</h3>
                         <p>${post.excerpt}</p>
-                        <a href="${baseUrl}?post=${post.id}" class="read-more">Ler mais</a>
+                        <a href="?post=${post.id}" class="read-more">Ler conto completo</a>
                     </div>
                 </div>
             `;
@@ -60,14 +41,12 @@ document.addEventListener('DOMContentLoaded', function() {
         app.innerHTML = html;
     }
 
-    // Carrega post completo
+    // Carrega post individual
     async function loadPost(postId) {
+        const posts = await loadPosts();
         const post = posts.find(p => p.id === postId);
         
-        if (!post) {
-            app.innerHTML = `<p>Post não encontrado</p>`;
-            return;
-        }
+        if (!post) return showHome();
         
         try {
             const response = await fetch(`${baseUrl}posts/${post.file}`);
@@ -78,14 +57,20 @@ document.addEventListener('DOMContentLoaded', function() {
                 <div class="post-full">
                     <h2>${post.title}</h2>
                     <div class="post-content">${content}</div>
-                    <a href="${baseUrl}" class="back-button">← Voltar</a>
+                    <a href="./" class="back-button">← Voltar ao acervo</a>
                 </div>
             `;
         } catch (error) {
             app.innerHTML = `
-                <p>Erro ao carregar o post</p>
-                <a href="${baseUrl}" class="back-button">Voltar</a>
+                <p>Erro ao carregar o conto</p>
+                <a href="./" class="back-button">Voltar</a>
             `;
         }
     }
+
+    // Roteamento
+    const urlParams = new URLSearchParams(window.location.search);
+    const postId = urlParams.get('post');
+    
+    postId ? await loadPost(postId) : await showHome();
 });
