@@ -16,6 +16,7 @@ Ela ficou, mexendo no celular por fachada.
 Olhares.  
 — _Melhor assim. A última que reparou, se atrasou._
 Saíram rindo. Ela ficou com o estômago quente: será que ele já ficou com _uma delas_?
+
 ---
 
 Fim de dia cheio. **Aniversário de 18 anos dela.** Amigas já tinham ido. Ele sumiu... e voltou: bombons dourados, sorriso malicioso que ela só via nas fantasias.  
